@@ -10,10 +10,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 @Log4j
-public class SkillDaoImplementation implements SkillDao {
+public class SkillDaoImpl implements SkillDao {
     private EntityManager entityManager;
 
-    public SkillDaoImplementation(EntityManager entityManager) {
+    public SkillDaoImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
@@ -50,7 +50,7 @@ public class SkillDaoImplementation implements SkillDao {
     }
 
     @Override
-    public Skill readSkill(Long id) {
+    public Skill findByld(Long id) {
         try {
             entityManager.getTransaction().begin();
             Skill skill = entityManager.find(Skill.class, id);

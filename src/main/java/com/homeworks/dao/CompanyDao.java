@@ -7,7 +7,7 @@ public interface CompanyDao {
 
     boolean updateCompany(Company company);
 
-    Company readCompany(Long id);
+    Company findByld(Long id);
 
     boolean deleteCompany(Long id);
 }

@@ -7,7 +7,7 @@ public interface CustomerDao {
 
     boolean updateCustomer(Customer customer);
 
-    Customer readCustomer(Long id);
+    Customer findByld(Long id);
 
     boolean deleteCustomer(Long id);
 }

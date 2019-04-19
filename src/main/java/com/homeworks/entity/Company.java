@@ -24,15 +24,10 @@ import javax.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
 @Log4j
 @Data
 @Entity
 @Table(name = "companies")
-@EqualsAndHashCode(callSuper = true)
 public class Company extends Model{
     @Column(name = "location")
     private String location;

@@ -10,10 +10,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 @Log4j
-public class CompanyDaoImplementation implements CompanyDao {
+public class CompanyDaoImpl implements CompanyDao {
     private EntityManager entityManager;
 
-    public CompanyDaoImplementation(EntityManager entityManager) {
+    public CompanyDaoImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
@@ -50,7 +50,7 @@ public class CompanyDaoImplementation implements CompanyDao {
     }
 
     @Override
-    public Company readCompany(Long id) {
+    public Company findByld(Long id) {
         try {
             entityManager.getTransaction().begin();
             Company company = entityManager.find(Company.class, id);

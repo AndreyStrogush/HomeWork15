@@ -1,9 +1,11 @@
 package com.homeworks.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -24,10 +26,8 @@ import javax.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@Log4j
+@Data
 @Entity
 @Table(name = "skills")
 public class Skill extends Model{
@@ -35,7 +35,7 @@ public class Skill extends Model{
     private String branch;
 
     @Column(name = "lvl")
-    private String level;
+    private LevelType level;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "skills")
     private Set<Developer> developers = new HashSet<>();

@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class HibernateUtil {
+public final class HibernateUtil {
     private static final String PERSISTENCE_UNIT_NAME = "PERSISTENCE";
     private static EntityManagerFactory entityManagerFactory;
 
-    public HibernateUtil() {
+    private HibernateUtil() {
     }
 
     public static EntityManagerFactory getEntityManagerFactory() {

@@ -1,6 +1,6 @@
 package com.homeworks;
 
-import com.homeworks.Implementation.DeveloperDaoImplementation;
+import com.homeworks.Implementation.DeveloperDaoImpl;
 import com.homeworks.Util.HibernateUtil;
 import com.homeworks.entity.Developer;
 
@@ -15,7 +15,7 @@ public class Aplication {
         developer.setAge(20);
         developer.setSalary(3000);
 
-        DeveloperDaoImplementation developerDao = new DeveloperDaoImplementation(entityManager);
+        DeveloperDaoImpl developerDao = new DeveloperDaoImpl(entityManager);
         developerDao.insertDeveloper(developer);
         HibernateUtil.shutdown();
     }

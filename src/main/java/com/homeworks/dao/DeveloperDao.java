@@ -7,7 +7,7 @@ public interface DeveloperDao {
 
     boolean updateDeveloper(Developer developer);
 
-    Developer readDeveloper(Long id);
+    Developer findByld(Long id);
 
     boolean deleteDeveloper(Long id);
 }

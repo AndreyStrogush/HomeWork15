@@ -1,10 +1,12 @@
 package com.homeworks.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -24,16 +26,13 @@ import javax.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@Log4j
+@Data
 @Entity
 @Table(name = "developers")
-@EqualsAndHashCode(callSuper = true)
 public class Developer extends Model {
     @Column(name = "age")
-    private Integer age = 0;
+    private Integer age;
 
     @Column(name = "salary")
     private Integer salary = 0;

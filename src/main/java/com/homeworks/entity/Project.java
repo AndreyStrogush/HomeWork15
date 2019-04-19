@@ -1,9 +1,11 @@
 package com.homeworks.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,11 +26,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-
+@Log4j
+@Data
 @Entity
 @Table(name = "projects")
 public class Project extends Model{
